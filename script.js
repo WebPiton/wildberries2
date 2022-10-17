@@ -11,6 +11,7 @@ function scrollButtonClick() {
 form.addEventListener("submit", async (e) => {
 	e.preventDefault();
 	const formData = new FormData(form);
+	formData.append("type", 1);
 
 	let response = await fetch("http://localhost:9999/feedback", {
 		method: "POST",
